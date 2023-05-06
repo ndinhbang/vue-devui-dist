@@ -5947,7 +5947,7 @@ var Button = defineComponent({
         "onClick": onClick
       }, [icon2.value && createVNode(Icon, {
         "name": icon2.value,
-        "size": "var(--devui-font-size, 12px)",
+        "size": "var(--b-font-size, 12px)",
         "color": "",
         "class": iconClass.value
       }, null), withDirectives(createVNode("div", {

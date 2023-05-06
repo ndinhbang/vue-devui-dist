@@ -7849,7 +7849,7 @@ const TransformOriginMap = {
 function usePopover(props, visible, placement, origin, popoverRef) {
   const { trigger, isOpen } = toRefs(props);
   const overlayStyles = computed(() => ({
-    zIndex: "var(--devui-z-index-pop-up, 1060)",
+    zIndex: "var(--b-z-index-pop-up, 1060)",
     transformOrigin: TransformOriginMap[placement.value]
   }));
   const onDocumentClick = (e) => {
@@ -10263,7 +10263,7 @@ var AutoComplete = defineComponent({
           "modelValue": visible.value,
           "onUpdate:modelValue": ($event) => visible.value = $event,
           "style": {
-            zIndex: "var(--devui-z-index-dropdown, 1052)"
+            zIndex: "var(--b-z-index-dropdown, 1052)"
           }
         }, {
           default: () => [createVNode("div", {
@@ -11048,7 +11048,7 @@ function useOverlayProps(props, currentPosition, isOpen) {
   const overlayShowValue = ref(false);
   const styles = computed(() => ({
     transformOrigin: currentPosition.value === "top" ? "0% 100%" : "0% 0%",
-    zIndex: "var(--devui-z-index-dropdown, 1052)"
+    zIndex: "var(--b-z-index-dropdown, 1052)"
   }));
   const classes = computed(() => ({
     "fade-in-bottom": showAnimation.value && isOpen.value && currentPosition.value === "bottom",
@@ -11411,7 +11411,7 @@ var DButton = defineComponent({
         "onClick": onClick
       }, [icon2.value && createVNode(DIcon, {
         "name": icon2.value,
-        "size": "var(--devui-font-size, 12px)",
+        "size": "var(--b-font-size, 12px)",
         "color": "",
         "class": iconClass.value
       }, null), withDirectives(createVNode("div", {
@@ -13302,7 +13302,7 @@ var Cascader = defineComponent({
           "position": position.value,
           "align": "start",
           "style": {
-            zIndex: "var(--devui-z-index-dropdown, 1052)"
+            zIndex: "var(--b-z-index-dropdown, 1052)"
           }
         }, {
           default: () => [createVNode("div", {
@@ -19814,7 +19814,7 @@ var DatePickerPro = defineComponent({
             "align": "start",
             "position": position.value,
             "style": {
-              zIndex: "var(--devui-z-index-dropdown, 1052)"
+              zIndex: "var(--b-z-index-dropdown, 1052)"
             }
           }, {
             default: () => [createVNode(DatePickerProPanel, mergeProps(props, {
@@ -20063,7 +20063,7 @@ var DRangeDatePickerPro = defineComponent({
             "align": "start",
             "position": position.value,
             "style": {
-              zIndex: "var(--devui-z-index-dropdown, 1052)"
+              zIndex: "var(--b-z-index-dropdown, 1052)"
             }
           }, {
             default: () => [createVNode(DatePickerProPanel, mergeProps(props, {
@@ -21206,7 +21206,7 @@ var EditableSelect = defineComponent({
           "origin": originRef.value,
           "position": position.value,
           "style": {
-            zIndex: "var(--devui-z-index-dropdown, 1052)"
+            zIndex: "var(--b-z-index-dropdown, 1052)"
           }
         }, {
           default: () => [createVNode(Dropdown, {
@@ -25080,22 +25080,22 @@ var Modal = defineComponent({
         type: "success",
         text: "\u6210\u529F",
         icon: "right-o",
-        color: "var(--devui-success)"
+        color: "var(--b-success)"
       }, {
         type: "failed",
         text: "\u9519\u8BEF",
         icon: "error-o",
-        color: "var(--devui-danger)"
+        color: "var(--b-danger)"
       }, {
         type: "warning",
         text: "\u8B66\u544A",
         icon: "warning-o",
-        color: "var(--devui-warning)"
+        color: "var(--b-warning)"
       }, {
         type: "info",
         text: "\u4FE1\u606F",
         icon: "info-o",
-        color: "var(--devui-info)"
+        color: "var(--b-info)"
       }];
       const item = typeList.find((i) => i.type === props.type);
       return createVNode("div", {
@@ -25129,7 +25129,7 @@ var Modal = defineComponent({
         "lock-scroll": false,
         "close-on-click-overlay": closeOnClickOverlay.value,
         "style": {
-          zIndex: "calc(var(--devui-z-index-modal, 1050) - 1)"
+          zIndex: "calc(var(--b-z-index-modal, 1050) - 1)"
         }
       }), null), createVNode(Transition, {
         "name": props.showAnimation ? ns2.m("wipe") : ""
@@ -26225,10 +26225,10 @@ function useColor(props) {
   return computed(() => {
     const { color: color2, type: type4 } = props;
     const typeMap = {
-      primary: "var(--devui-primary, #5e7ce0)",
-      success: "var(--devui-success, #50d4ab)",
-      warning: "var(--devui-warning, #fac20a)",
-      danger: "var(--devui-danger, #f66f6a)"
+      primary: "var(--b-primary, #5e7ce0)",
+      success: "var(--b-success, #50d4ab)",
+      warning: "var(--b-warning, #fac20a)",
+      danger: "var(--b-danger, #f66f6a)"
     };
     const colorMap = {
       "blue-w98": "#3383ff",
@@ -26304,7 +26304,7 @@ var Tag = defineComponent({
         "style": {
           display: "block",
           color: contentColor.value,
-          backgroundColor: checked.value ? themeColor.value : !color2.value ? "" : "var(--devui-base-bg, #ffffff)"
+          backgroundColor: checked.value ? themeColor.value : !color2.value ? "" : "var(--b-base-bg, #ffffff)"
         },
         "title": tagTitle
       }, [(_a = slots.default) == null ? void 0 : _a.call(slots), closeIconEl()])]);
@@ -26648,7 +26648,7 @@ var Select = defineComponent({
             "position": position.value,
             "style": {
               visibility: isOpen.value ? "visible" : "hidden",
-              "z-index": isOpen.value ? "var(--devui-z-index-dropdown, 1052)" : -1
+              "z-index": isOpen.value ? "var(--b-z-index-dropdown, 1052)" : -1
             }
           }, {
             default: () => {
@@ -27657,7 +27657,7 @@ var Progress = defineComponent({
       a ${radius},${radius} 0 1 1 0,${endPositionY}`;
       const len = Math.PI * 2 * radius;
       data.trailPath = {
-        stroke: "var(--devui-dividing-line, #dfe1e6)",
+        stroke: "var(--b-dividing-line, #dfe1e6)",
         strokeDasharray: `${len}px ${len}px`,
         strokeDashoffset: `0`,
         transition: "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s"
@@ -30782,22 +30782,22 @@ var Step = defineComponent({
     const iconColor = computed(() => {
       const isActive = activeStep.value === currentStepIndex;
       const isFinished = activeStep.value > currentStepIndex;
-      return isActive ? "var(--devui-brand)" : isFinished ? "var(--devui-success)" : "var(--devui-placeholder)";
+      return isActive ? "var(--b-brand)" : isFinished ? "var(--b-success)" : "var(--b-placeholder)";
     });
     const statusMap = {
       finish: createVNode(DIcon, {
         "name": "right-o",
-        "color": "var(--devui-success)",
+        "color": "var(--b-success)",
         "size": "24px"
       }, null),
       success: createVNode(DIcon, {
         "name": "right-o",
-        "color": "var(--devui-success)",
+        "color": "var(--b-success)",
         "size": "24px"
       }, null),
       error: createVNode(DIcon, {
         "name": "error-o",
-        "color": "var(--devui-danger)",
+        "color": "var(--b-danger)",
         "size": "24px"
       }, null)
     };
@@ -30809,7 +30809,7 @@ var Step = defineComponent({
         "size": "24px"
       }, null) : status2.value && statusMap[status2.value] ? statusMap[status2.value] : activeStep.value > steps2.value.indexOf(instance) ? createVNode(DIcon, {
         "name": "right-o",
-        "color": "var(--devui-success)",
+        "color": "var(--b-success)",
         "size": "24px"
       }, null) : createVNode("span", {
         "class": ns2.e("dot")
@@ -33811,7 +33811,7 @@ var TagInput = defineComponent({
             "modelValue": isShowSuggestion.value,
             "onUpdate:modelValue": ($event) => isShowSuggestion.value = $event,
             "style": {
-              zIndex: "var(--devui-z-index-dropdown, 1052)"
+              zIndex: "var(--b-z-index-dropdown, 1052)"
             }
           }, {
             default: () => [createVNode("ul", {
@@ -34205,7 +34205,7 @@ var TimePicker = defineComponent({
               "position": position.value,
               "align": "start",
               "style": {
-                zIndex: "var(--devui-z-index-dropdown, 1052)"
+                zIndex: "var(--b-z-index-dropdown, 1052)"
               }
             }, {
               default: () => [createVNode(TimePopup, {

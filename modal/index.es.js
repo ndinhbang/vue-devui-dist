@@ -754,22 +754,22 @@ var Modal = defineComponent({
         type: "success",
         text: "\u6210\u529F",
         icon: "right-o",
-        color: "var(--devui-success)"
+        color: "var(--b-success)"
       }, {
         type: "failed",
         text: "\u9519\u8BEF",
         icon: "error-o",
-        color: "var(--devui-danger)"
+        color: "var(--b-danger)"
       }, {
         type: "warning",
         text: "\u8B66\u544A",
         icon: "warning-o",
-        color: "var(--devui-warning)"
+        color: "var(--b-warning)"
       }, {
         type: "info",
         text: "\u4FE1\u606F",
         icon: "info-o",
-        color: "var(--devui-info)"
+        color: "var(--b-info)"
       }];
       const item = typeList.find((i) => i.type === props.type);
       return createVNode("div", {
@@ -803,7 +803,7 @@ var Modal = defineComponent({
         "lock-scroll": false,
         "close-on-click-overlay": closeOnClickOverlay.value,
         "style": {
-          zIndex: "calc(var(--devui-z-index-modal, 1050) - 1)"
+          zIndex: "calc(var(--b-z-index-modal, 1050) - 1)"
         }
       }), null), createVNode(Transition, {
         "name": props.showAnimation ? ns.m("wipe") : ""

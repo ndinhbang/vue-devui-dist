@@ -6045,7 +6045,7 @@ const TransformOriginMap = {
 function usePopover(props, visible, placement, origin, popoverRef) {
   const { trigger, isOpen } = toRefs(props);
   const overlayStyles = computed(() => ({
-    zIndex: "var(--devui-z-index-pop-up, 1060)",
+    zIndex: "var(--b-z-index-pop-up, 1060)",
     transformOrigin: TransformOriginMap[placement.value]
   }));
   const onDocumentClick = (e) => {
@@ -8772,10 +8772,10 @@ function useColor(props) {
   return computed(() => {
     const { color, type: type4 } = props;
     const typeMap = {
-      primary: "var(--devui-primary, #5e7ce0)",
-      success: "var(--devui-success, #50d4ab)",
-      warning: "var(--devui-warning, #fac20a)",
-      danger: "var(--devui-danger, #f66f6a)"
+      primary: "var(--b-primary, #5e7ce0)",
+      success: "var(--b-success, #50d4ab)",
+      warning: "var(--b-warning, #fac20a)",
+      danger: "var(--b-danger, #f66f6a)"
     };
     const colorMap = {
       "blue-w98": "#3383ff",
@@ -8851,7 +8851,7 @@ var Tag = defineComponent({
         "style": {
           display: "block",
           color: contentColor.value,
-          backgroundColor: checked.value ? themeColor.value : !color.value ? "" : "var(--devui-base-bg, #ffffff)"
+          backgroundColor: checked.value ? themeColor.value : !color.value ? "" : "var(--b-base-bg, #ffffff)"
         },
         "title": tagTitle
       }, [(_a = slots.default) == null ? void 0 : _a.call(slots), closeIconEl()])]);
@@ -9356,7 +9356,7 @@ var Select = defineComponent({
             "position": position.value,
             "style": {
               visibility: isOpen.value ? "visible" : "hidden",
-              "z-index": isOpen.value ? "var(--devui-z-index-dropdown, 1052)" : -1
+              "z-index": isOpen.value ? "var(--b-z-index-dropdown, 1052)" : -1
             }
           }, {
             default: () => {
@@ -10315,7 +10315,7 @@ function useOverlayProps(props, currentPosition, isOpen) {
   const overlayShowValue = ref(false);
   const styles = computed(() => ({
     transformOrigin: currentPosition.value === "top" ? "0% 100%" : "0% 0%",
-    zIndex: "var(--devui-z-index-dropdown, 1052)"
+    zIndex: "var(--b-z-index-dropdown, 1052)"
   }));
   const classes = computed(() => ({
     "fade-in-bottom": showAnimation.value && isOpen.value && currentPosition.value === "bottom",

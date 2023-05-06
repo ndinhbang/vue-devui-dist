@@ -212,7 +212,7 @@ function useOverlayProps(props, currentPosition, isOpen) {
   const overlayShowValue = ref(false);
   const styles = computed(() => ({
     transformOrigin: currentPosition.value === "top" ? "0% 100%" : "0% 0%",
-    zIndex: "var(--devui-z-index-dropdown, 1052)"
+    zIndex: "var(--b-z-index-dropdown, 1052)"
   }));
   const classes = computed(() => ({
     "fade-in-bottom": showAnimation.value && isOpen.value && currentPosition.value === "bottom",

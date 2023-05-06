@@ -6630,7 +6630,7 @@ var Button = defineComponent({
         "onClick": onClick
       }, [icon2.value && createVNode(Icon, {
         "name": icon2.value,
-        "size": "var(--devui-font-size, 12px)",
+        "size": "var(--b-font-size, 12px)",
         "color": "",
         "class": iconClass.value
       }, null), withDirectives(createVNode("div", {
@@ -7549,7 +7549,7 @@ const TransformOriginMap = {
 function usePopover(props, visible, placement, origin, popoverRef) {
   const { trigger, isOpen } = toRefs(props);
   const overlayStyles = computed(() => ({
-    zIndex: "var(--devui-z-index-pop-up, 1060)",
+    zIndex: "var(--b-z-index-pop-up, 1060)",
     transformOrigin: TransformOriginMap[placement.value]
   }));
   const onDocumentClick = (e) => {
@@ -9520,7 +9520,7 @@ var TimePicker = defineComponent({
               "position": position.value,
               "align": "start",
               "style": {
-                zIndex: "var(--devui-z-index-dropdown, 1052)"
+                zIndex: "var(--b-z-index-dropdown, 1052)"
               }
             }, {
               default: () => [createVNode(TimePopup, {

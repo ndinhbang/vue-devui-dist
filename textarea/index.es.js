@@ -6034,7 +6034,7 @@ const TransformOriginMap = {
 function usePopover(props, visible, placement, origin, popoverRef) {
   const { trigger, isOpen } = toRefs(props);
   const overlayStyles = computed(() => ({
-    zIndex: "var(--devui-z-index-pop-up, 1060)",
+    zIndex: "var(--b-z-index-pop-up, 1060)",
     transformOrigin: TransformOriginMap[placement.value]
   }));
   const onDocumentClick = (e) => {

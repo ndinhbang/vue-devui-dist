@@ -6848,7 +6848,7 @@ var EditableSelect = defineComponent({
           "origin": originRef.value,
           "position": position.value,
           "style": {
-            zIndex: "var(--devui-z-index-dropdown, 1052)"
+            zIndex: "var(--b-z-index-dropdown, 1052)"
           }
         }, {
           default: () => [createVNode(Dropdown, {

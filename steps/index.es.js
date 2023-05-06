@@ -321,22 +321,22 @@ var Step = defineComponent({
     const iconColor = computed(() => {
       const isActive = activeStep.value === currentStepIndex;
       const isFinished = activeStep.value > currentStepIndex;
-      return isActive ? "var(--devui-brand)" : isFinished ? "var(--devui-success)" : "var(--devui-placeholder)";
+      return isActive ? "var(--b-brand)" : isFinished ? "var(--b-success)" : "var(--b-placeholder)";
     });
     const statusMap = {
       finish: createVNode(Icon, {
         "name": "right-o",
-        "color": "var(--devui-success)",
+        "color": "var(--b-success)",
         "size": "24px"
       }, null),
       success: createVNode(Icon, {
         "name": "right-o",
-        "color": "var(--devui-success)",
+        "color": "var(--b-success)",
         "size": "24px"
       }, null),
       error: createVNode(Icon, {
         "name": "error-o",
-        "color": "var(--devui-danger)",
+        "color": "var(--b-danger)",
         "size": "24px"
       }, null)
     };
@@ -348,7 +348,7 @@ var Step = defineComponent({
         "size": "24px"
       }, null) : status.value && statusMap[status.value] ? statusMap[status.value] : activeStep.value > steps2.value.indexOf(instance) ? createVNode(Icon, {
         "name": "right-o",
-        "color": "var(--devui-success)",
+        "color": "var(--b-success)",
         "size": "24px"
       }, null) : createVNode("span", {
         "class": ns.e("dot")

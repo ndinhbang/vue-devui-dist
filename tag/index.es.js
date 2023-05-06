@@ -59,10 +59,10 @@ function useColor(props) {
   return computed(() => {
     const { color, type } = props;
     const typeMap = {
-      primary: "var(--devui-primary, #5e7ce0)",
-      success: "var(--devui-success, #50d4ab)",
-      warning: "var(--devui-warning, #fac20a)",
-      danger: "var(--devui-danger, #f66f6a)"
+      primary: "var(--b-primary, #5e7ce0)",
+      success: "var(--b-success, #50d4ab)",
+      warning: "var(--b-warning, #fac20a)",
+      danger: "var(--b-danger, #f66f6a)"
     };
     const colorMap = {
       "blue-w98": "#3383ff",
@@ -138,7 +138,7 @@ var Tag = defineComponent({
         "style": {
           display: "block",
           color: contentColor.value,
-          backgroundColor: checked.value ? themeColor.value : !color.value ? "" : "var(--devui-base-bg, #ffffff)"
+          backgroundColor: checked.value ? themeColor.value : !color.value ? "" : "var(--b-base-bg, #ffffff)"
         },
         "title": tagTitle
       }, [(_a = slots.default) == null ? void 0 : _a.call(slots), closeIconEl()])]);
