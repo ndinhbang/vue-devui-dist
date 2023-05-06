@@ -1,0 +1,8 @@
+{
+  "name": "timeline",
+  "version": "0.0.0",
+  "main": "index.umd.js",
+  "module": "index.es.js",
+  "style": "style.css",
+  "types": "../types/timeline/index.d.ts"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "date-picker-pro",
+  "version": "0.0.0",
+  "main": "index.umd.js",
+  "module": "index.es.js",
+  "style": "style.css",
+  "types": "../types/date-picker-pro/index.d.ts"
+}

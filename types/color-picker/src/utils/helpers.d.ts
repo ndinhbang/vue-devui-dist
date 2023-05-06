@@ -1,0 +1,10 @@
+export declare function padEnd(str: string, length: number, char?: string): string;
+export declare function chunk(str: string, size?: number): string[];
+export declare function mergeObjects<T extends Record<string, unknown>, K extends Record<string, unknown>>(source: T, target: K): Record<string, unknown>;
+export declare function parseHex(value: string): number;
+export declare const clamp: (value: number, min: number, max: number) => number;
+export declare const upperCase: (word: string) => string;
+export declare const lowerCase: (word: string) => string;
+export declare function splitStr(str: string, chars: string): string;
+export declare function keepDecimal(value: number, digits?: number): number;
+export declare function has<T extends Record<string, unknown>>(obj: T, key: string[]): boolean;

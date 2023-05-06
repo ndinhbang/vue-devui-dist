@@ -1,0 +1,11 @@
+export declare const DAY_DURATION: number;
+export declare const yearItemHeight = 30;
+export declare const calendarItemHeight = 186;
+export declare const yearListHeight = 305;
+export declare const calendarListHeight = 270;
+export declare const monthPickerHeight = 300;
+export declare const monthCalendarItemHeight = 186;
+export declare const yearPickerHeight = 186;
+export declare const yearCalendarItemHeight = 48;
+export declare const DEFAULT_DATE = "YYYY/MM/DD";
+export declare const DEFAULT_TIME: string;

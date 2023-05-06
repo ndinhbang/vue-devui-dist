@@ -1,0 +1,8 @@
+{
+  "name": "upload",
+  "version": "0.0.0",
+  "main": "index.umd.js",
+  "module": "index.es.js",
+  "style": "style.css",
+  "types": "../types/upload/index.d.ts"
+}
